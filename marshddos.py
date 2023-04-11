@@ -61,7 +61,7 @@ while True:
      sock.sendto(bytes, (ips,port))
      sent = sent + 1
      port = port + 1
-     print(Fore.YELLOW + "%s packet send ====>>>>>> %s      [[  %s  ]]"%(sent,ips))
+     print(Fore.YELLOW + "%s packet send ====>>>>>> %s      "%(sent,ips))
      if port == 65534:
        port = 1
 
